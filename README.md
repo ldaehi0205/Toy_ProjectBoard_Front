@@ -6,11 +6,11 @@
 
 React, Hook, styled-Component, Router
 
-### `yarn start`
+##### `yarn start`
 
 프로젝트를 localhost:3000 주소로 개발용 모드로 실행합니다.
 
-### `yarn build`
+##### `yarn build`
 
 build를 실행합니다.
 
