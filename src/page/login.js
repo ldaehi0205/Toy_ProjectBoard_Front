@@ -5,18 +5,27 @@ import { withRouter, Link } from "react-router-dom";
 const Login = ({ history }) => {
   const [id, setid] = useState("");
   const [pw, setpw] = useState("");
+  const [name, setName] = useState("");
 
   const Submit = () => {
     fetch("http://localhost:3001/user")
       .then(res => res.json())
       .then(res => res.data.post)
       .then(res =>
-        res.forEach(e => {
-          e.id === id && e.pw === pw && history.push("/main");
+        res.some(e => {
+          if (e.id === id && e.pw === pw) {
+            setName(e.name);
+            history.push("/main");
+            return true;
+          } else if (
+            res[res.length - 1].id === e.id &&
+            res[res.length - 1].pw === e.pw
+          )
+            alert("다시입력해주세요");
         })
       );
   };
-
+  console.log(name);
   const handleId = e => {
     setid(e.target.value);
   };
