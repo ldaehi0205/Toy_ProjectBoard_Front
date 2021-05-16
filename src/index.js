@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./page/login";
 import join from "./page/join";
 import main from "./page/main";
+import write from "./page/write";
 
 ReactDOM.render(
   <>
@@ -12,6 +13,7 @@ ReactDOM.render(
         <Route exact path="/login" component={Login} />
         <Route exact path="/join" component={join} />
         <Route exact path="/main" component={main} />
+        <Route exact path="/write" component={write} />
       </Switch>
     </BrowserRouter>
   </>,
