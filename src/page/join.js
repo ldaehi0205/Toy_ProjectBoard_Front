@@ -107,10 +107,10 @@ const LoginPage = styled.div`
     margin: 20px 0px;
     width: 70%;
     height: 60px;
+    color: rgb(255, 255, 255);
     background-color: rgba(85, 171, 85, 0.7);
     cursor: pointer;
     border: none;
-    color: rgb(255, 255, 255);
     font-size: 18px;
 
     :hover {
